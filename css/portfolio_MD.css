@@ -1,0 +1,189 @@
+/* cog3 username is cg3wht */
+
+Header#First_Jumbotron {
+    background-color: blueviolet;
+    background-image: url("images/biology/Biology.jpg");
+    background-repeat: round;
+    text-align: center;
+    background-position-y: 0%;
+    background-position-x: 0%;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    margin-top: -5%;
+    margin-left: -3%;
+    margin-right: -3%;
+}
+
+div#First_fluidContainer {
+    background-color: rgba(255, 218, 97, 0.637);
+    background-image: url("images/bgk.png");
+}
+
+h1#headingH1 {
+    font-size: 425%;
+}
+
+Summary#headingSummary {
+    font-size: 300%;
+}
+
+img#my_myself {
+    width: 50%;
+}
+
+div#profile_Container {
+    text-align: center;
+}
+
+body {
+    position: relative;
+}
+
+ul.nav-pills {
+    top: 20px;
+    position: fixed;
+    object-position: bottom;
+    background: rgba(0, 0, 0, 0.712);
+}
+
+img#my_myself {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+div#carousel_words1 {
+    text-align: right;
+    margin-bottom: 1.5%;
+    margin-right: -6%;
+    color: black;
+}
+
+div#carousel_words2 {
+    text-align: right;
+    margin-bottom: 4%;
+    margin-right: -6%;
+    color: black;
+}
+
+div#carousel_words3 {
+    text-align: right;
+    margin-bottom: 12%;
+    margin-right: -6%;
+    color: black;
+}
+
+div#carousel_words1h,
+div#carousel_words2h,
+div#carousel_words3h {
+    visibility: hidden;
+}
+
+.carousel-inner img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 5%;
+    margin-left: 9%;
+    margin-top: 3%;
+}
+
+#experience_center {
+    text-align: center;
+}
+
+div#boxed_images {
+    width: 20%;
+}
+
+div#carousel_colorbg {
+    background-color: rgba(39, 160, 230, 0.308);
+}
+
+#text_needs_italics {
+    font-style: italic;
+}
+
+div#contact_section {
+    text-align: center;
+    margin-top: 2%;
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    ul.nav-pills {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    .carousel-inner img {
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    /* For smaller laptops: */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30%;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    /* For mobile phones: */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 50%;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    /* For mobile phones: */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 140%;
+    }
+}
+
+@media only screen and (max-width:376px) {
+    /* For mobile phones: */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 190%;
+    }
+}
+
+@media only screen and (max-width:321px) {
+    /* For mobile phones: */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 253%;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    /* For smaller laptops: */
+    div#carousel_words1,
+    div#carousel_words2,
+    div#carousel_words3 {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    /* For smaller laptops: */
+    div#carousel_words1h,
+    div#carousel_words2h,
+    div#carousel_words3h {
+        visibility: visible;
+        color: black;
+    }
+}
