@@ -108,6 +108,10 @@ div#contact_section {
     margin-top: 2%;
 }
 
+div#coding_section_link {
+    text-align: center;
+}
+
 @media only screen and (max-width:735px) {
     /* For mobile phones: */
     ul.nav-pills {
