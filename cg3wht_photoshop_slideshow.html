@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Michael's Photoshop Work Slideshow</title>
+    <link rel="stylesheet" href="css/cg3wht_photoshop_slideshow.css">
+
+</head>
+
+<body onclick>
+    <h1>
+        Photoshop Assignment for COGS 3
+    </h1>
+    <div align="center">
+        <img id="bannerId" name="banner" src="images/partC_complete.gif">
+
+        <div id="pDiv">
+            <p id="captio">
+                This caption will explain what the photoshop work is, my inspiration, and what I learned.
+                <br> The previous and next slide buttons will automatically stop the slideshow.
+                <br> Slideshow is set at 10 second intervals.
+            </p>
+        </div>
+
+        <button id="prev" onclick="previousSlide()">
+            previous slide
+        </button>
+        <button id="nex" onclick="nextSlide()">
+            next slide
+        </button>
+        <button id="start">
+            start slideshow
+        </button>
+
+        <button id="numberButton">Slide 0 out of 9</button>
+    </div>
+    <script>
+        var imgArray = new Array();
+        var index = 0;
+        var timer;
+        var slideshowButton = document.getElementById("start");
+        slideshowButton.addEventListener("click", cycleRef);
+        slideshowButton.addEventListener("click", slideNumber);
+
+
+
+        function cycleRef() {
+            if (index == 0) {
+                clearTimeout(timer);
+                index = 7;
+                startup();
+            }
+            /*
+            For some reason for me the index numbers were not aligned with what they were in the array, but I got it to work out with
+            the numbers they came out with.
+            */
+            else {
+                index = index - 1;
+            }
+            clearTimeout(timer);
+            timer = setTimeout("cycle()", 10000);
+            cycle();
+            document.getElementById("start").innerHTML = "stop Slideshow";
+            document.getElementById("start").removeEventListener('click', cycleRef);
+            document.getElementById("start").addEventListener('click', stopCycle);
+            return;
+
+        }
+
+        function stopCycle() {
+            clearTimeout(timer);
+            document.getElementById("start").innerHTML = "start Slideshow";
+            document.getElementById("start").removeEventListener('click', stopCycle);
+            document.getElementById("start").addEventListener('click', cycleRef);
+        }
+
+        function slideNumber() {
+            if (index == 0) {
+                document.getElementById("numberButton").innerHTML = "Slide 1 out of 9";
+                document.getElementById("captio").innerHTML = "Part A: This is the tutorial for 'How to Create a 3D Stuffed Letters Text Effect in Adobe Photoshop' <br> which I used to make my poster. Link to the tutorial is <br> https://design.tutsplus.com/tutorials/create-a-fantasy-snail-photo-manipulation-with-photoshop--cms-27094?_ga=2.246727108.1180591162.1518592244-310971891.1518592244 ";
+            } else if (index == 1) {
+                document.getElementById("numberButton").innerHTML = "Slide 2 out of 9";
+                document.getElementById("captio").innerHTML = "Part A: in progress. I was inspired to do this text effect for this poster because my organization A2F likes to play the couch game, and this effect makes the letters look like pillows. So I made a poster for the A2F Couch Game which can be used to introduce the game.";
+            } else if (index == 2) {
+                document.getElementById("numberButton").innerHTML = "Slide 3 out of 9";
+                document.getElementById("captio").innerHTML = "Part A: The complete poster. I learned how to make simple letters into 3D letters and how to create all the different sides and piping to each along with each of their own textures. Also learned how to better use the UV properties to move and shape the textures.";
+            } else if (index == 3) {
+                document.getElementById("numberButton").innerHTML = "Slide 4 out of 9";
+                document.getElementById("captio").innerHTML = "Part B: This is the tutorial for 'How to Create a Fantasy Snail Photo Manipulation With Adobe Photoshop' <br> I used this to make a photo manipulation of a snail to have its shell look like a house. The link is: <br> https://design.tutsplus.com/tutorials/3d-stuffed-letters-text-effect--cms-28438?_ga=2.213919191.1180591162.1518592244-310971891.1518592244 ";
+            } else if (index == 4) {
+                document.getElementById("numberButton").innerHTML = "Slide 5 out of 9";
+                document.getElementById("captio").innerHTML = "Part B: in progress. I am currently in an entomology, a class on the study of insects. Even though a snail isn't an insect it was something similar and it looked very cute in the tutorial picture compared to the other scary or dark ones.";
+            } else if (index == 5) {
+                document.getElementById("numberButton").innerHTML = "Slide 6 out of 9";
+                document.getElementById("captio").innerHTML = "Part B: The complete photo. I learned and got better at masking things with layers and how to use the magic wand or lasso to better cut out images to then paste and use in a mask.";
+            } else if (index == 6) {
+                document.getElementById("numberButton").innerHTML = "Slide 7 out of 9";
+                document.getElementById("captio").innerHTML = "Part C: This is the youtube tutorial for cinemographs 'How to Create a Cinemagraph in Photoshop' and I used this to make a cinemograph of my shrimp eating. The link to the tutorial is: <br> https://www.youtube.com/watch?v=2DU0Sim_BJ4 ";
+            } else if (index == 7) {
+                document.getElementById("numberButton").innerHTML = "Slide 8 out of 9";
+                document.getElementById("captio").innerHTML = "Part C: in progress. I was inspired to make this cinemograph of my gif as I was looking at old videos on my phone and found many shrimp videos and just picked the one that would best fit a cinemograph.";
+            } else if (index == 8) {
+                document.getElementById("numberButton").innerHTML = "Slide 9 out of 9";
+                document.getElementById("captio").innerHTML = "Part C: The complete cinemograph (gif), If you look at the little blue shrimp you will see all it's legs moving really fast as they eat very tiny layers of growing algae and phytoplankton. <br> I learned what videos are best for cinemographs, and how to make the cinemograph using overlaying videos and a masked layer. This is a cropped version of the gif to better let you see the shrimp. Before the slideshow starts you can see the complete squished gif, the original can be found in the images folder.";
+            } else {
+                document.getElementById("numberButton").innerHTML = "broken";
+            }
+            return;
+        }
+
+        function cycle() {
+            document.banner.src = imgArray[index].src;
+            index++;
+            if (index > 8) {
+                index = 0;
+            }
+
+            clearTimeout(timer);
+            timer = setTimeout("cycle()", 10000);
+            slideNumber();
+            return;
+        }
+
+        function startup() {
+            imgArray[0] = new Image;
+            imgArray[1] = new Image;
+            imgArray[2] = new Image;
+            imgArray[3] = new Image;
+            imgArray[4] = new Image;
+            imgArray[5] = new Image;
+            imgArray[6] = new Image;
+            imgArray[7] = new Image;
+            imgArray[8] = new Image;
+
+
+            imgArray[8].src = "images/partA_tutorial.jpg";
+            imgArray[0].src = "images/partA_inProgress.jpg";
+            imgArray[1].src = "images/partA_complete.jpg";
+            imgArray[2].src = "images/partB_tutorial.jpg";
+            imgArray[3].src = "images/partB_inProgress.jpg";
+            imgArray[4].src = "images/partB_complete.jpg";
+            imgArray[5].src = "images/partC_tutorial.jpg";
+            imgArray[6].src = "images/partC_inProgress.jpg";
+            imgArray[7].src = "images/partC_complete2cropped.gif";
+
+            cycle();
+            return;
+        }
+
+        function nextSlide() {
+            if (index < 8) {
+                clearTimeout(timer);
+                imgArray[index];
+                startup();
+                clearTimeout(timer);
+            } else if (index = 8) {
+                clearTimeout(timer);
+                index = 8;
+                startup();
+                clearTimeout(timer);
+            }
+            document.getElementById("start").innerHTML = "start Slideshow";
+            document.getElementById("start").removeEventListener('click', stopCycle);
+            document.getElementById("start").addEventListener('click', cycleRef);
+            slideNumber();
+            return;
+        }
+
+        function previousSlide() {
+            if (index > 1) {
+                clearTimeout(timer);
+                index = index - 2;
+                startup();
+                clearTimeout(timer);
+            } else if (index == 1) {
+                clearTimeout(timer);
+                index = 8;
+                startup();
+                clearTimeout(timer);
+                return;
+            } else if (index == 0) {
+                clearTimeout(timer);
+                index = 7;
+                startup();
+                clearTimeout(timer);
+                return;
+            }
+            document.getElementById("start").innerHTML = "start Slideshow";
+            document.getElementById("start").removeEventListener('click', stopCycle);
+            document.getElementById("start").addEventListener('click', cycleRef);
+            slideNumber();
+            return;
+        }
+    </script>
+
+
+</body>
+
+</html>
