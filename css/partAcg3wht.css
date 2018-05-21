@@ -1,0 +1,187 @@
+body#scrollSpyBody {
+    position: relative;
+}
+
+ul.nav-pills {
+    top: 0px;
+    position: fixed;
+    background-color: coral;
+    border: 0px;
+    border-radius: 10px;
+    ;
+}
+
+img#portfolio {
+    width: 65%;
+    height: 200px;
+}
+
+Header#header1 {
+    background-image: url("images/relaxSucculent.jpg");
+    background-repeat: round;
+    background-size: 180%;
+    background-position-y: 0%;
+    background-position-x: 0%;
+    color: white;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
+    margin-right: 19%;
+    margin-left: 2%;
+}
+
+p#header_text {
+    font-size: 200%;
+    padding: 1%;
+}
+
+#imageTitles {
+    text-align: center;
+    font-weight: bold;
+}
+
+#myScrollspy {
+    font-size: 145%;
+    font-weight: bolder;
+}
+
+p#reviewDescription {
+    font-size: 200%;
+}
+
+#aboutMe {
+    text-align: center;
+    clear: both;
+    font-size: 100%;
+}
+
+#aboutMe h1 {
+    font-size: 350%;
+}
+
+div#reviewSection div img {
+    border: solid rgba(255, 0, 0, 0.404) 8px;
+}
+
+div#reviewSection {
+    text-align: center;
+}
+
+div#reviewSection div p {
+    text-align: left;
+}
+
+#Melvin {
+    float: right;
+}
+
+#reviewImg {
+    width: 80%;
+}
+
+p {
+    line-height: 30px;
+}
+
+h1 {
+    line-height: 30px;
+}
+
+h3 {
+    line-height: 30px;
+}
+
+#second_section_title {
+    text-align: center;
+    font-family: Cambria;
+    font-size: 500%;
+    line-height: 55px;
+}
+
+#imageTitles_Koloc_van {
+    text-align: center;
+    margin-right: 4%;
+    font-weight: bold;
+}
+
+#imageCpt {
+    font-size: 200%;
+    font-weight: bold
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    ul.nav-pills {
+        font-size: 20%;
+        width: 12%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    p#reviewDescription {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #reviewDescription {
+        margin-right: 6%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #second_section_title {
+        font-size: 350%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #boxes_in_first {
+        padding-right: 6.5%;
+        padding-left: 3.5%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #portfolio {
+        padding-bottom: 15%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    Header#header1 {
+        margin-right: 8%;
+        margin-left: 5%;
+        margin-bottom: 1%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #cutting_hr {
+        margin-right: 6.5%;
+        margin-left: 3.5%;
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    #imageCpt {
+        font-size: 125%;
+        font-weight: bold
+    }
+}
+
+@media only screen and (max-width:735px) {
+    /* For mobile phones: */
+    p#header_text {
+        font-size: 200%;
+        font-weight: bolder;
+    }
+}
